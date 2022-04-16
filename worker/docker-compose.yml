@@ -1,0 +1,9 @@
+version: '2'
+services:
+  worker:
+    build: .
+    command: npm run start.watch
+    volumes:
+      - .:/app/
+      - /app/node_modules
+    network_mode: "host"
